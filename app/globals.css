@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 220 80% 50%;
+    --accent: 200 100% 50%;
+    --bg: 215 25% 10%;
+    --surface: 215 25% 15%;
+    --text: 215 40% 90%;
+    --success: 160 80% 40%;
+    --warning: 35 90% 50%;
+    --danger: 0 80% 50%;
+    --muted: 215 20% 60%;
+  }
+  
+  body {
+    @apply bg-bg text-text;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface hover:bg-surface/80 text-text border border-white/20 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .data-card {
+    @apply bg-surface border border-white/10 rounded-lg p-4 shadow-card;
+  }
+  
+  .agent-message {
+    @apply bg-surface/50 rounded-lg p-3 mb-3;
+  }
+  
+  .user-message {
+    @apply bg-primary/20 rounded-lg p-3 mb-3 ml-8;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
