@@ -1,10 +1,11 @@
 export interface DeFiPosition {
-  id: string;
+  positionId: string;
+  userId: string;
   protocol: string;
   asset: string;
-  amount: number;
-  apy: number;
-  earnings: string;
+  amountStaked: number;
+  currentAPY: number;
+  estimatedEarnings: number;
   risk: 'low' | 'medium' | 'high';
   lastUpdated: Date;
 }
@@ -15,6 +16,7 @@ export interface Subscription {
   amount: number;
   frequency: 'monthly' | 'yearly';
   lastUsed: string;
+  category: string;
   status: 'active' | 'unused' | 'cancelled';
 }
 
@@ -24,7 +26,8 @@ export interface Fee {
   amount: number;
   frequency: string;
   impact: string;
-  category: 'banking' | 'transaction' | 'service';
+  description: string;
+  category?: 'banking' | 'transaction' | 'service';
 }
 
 export interface User {

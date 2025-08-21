@@ -5,20 +5,20 @@ import {
   useAddFrame,
   useOpenUrl,
   usePrimaryButton,
-} from "@coinbase/onchainkit/minikit";
+} from "./mocks/minikit";
 import {
   Name,
   Identity,
   Address,
   Avatar,
   EthBalance,
-} from "@coinbase/onchainkit/identity";
+} from "./mocks/identity";
 import {
   ConnectWallet,
   Wallet,
   WalletDropdown,
   WalletDropdownDisconnect,
-} from "@coinbase/onchainkit/wallet";
+} from "./mocks/wallet";
 import { useEffect, useMemo, useState, useCallback } from "react";
 import { AppShell } from "./components/AppShell";
 import { AgentChat } from "./components/AgentChat";

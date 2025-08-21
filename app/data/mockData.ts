@@ -1,7 +1,6 @@
+import { Subscription, Fee, DeFiPosition } from '../types';
 
-import { SubscriptionData, FeeData, DeFiPosition } from '../types';
-
-export const mockSubscriptions: SubscriptionData[] = [
+export const mockSubscriptions: Subscription[] = [
   {
     id: '1',
     name: 'Netflix',
@@ -9,7 +8,7 @@ export const mockSubscriptions: SubscriptionData[] = [
     frequency: 'monthly',
     category: 'Entertainment',
     status: 'active',
-    lastUsed: new Date('2024-01-15'),
+    lastUsed: '2024-01-15',
   },
   {
     id: '2',
@@ -18,7 +17,7 @@ export const mockSubscriptions: SubscriptionData[] = [
     frequency: 'monthly',
     category: 'Music',
     status: 'active',
-    lastUsed: new Date('2024-01-20'),
+    lastUsed: '2024-01-20',
   },
   {
     id: '3',
@@ -26,8 +25,8 @@ export const mockSubscriptions: SubscriptionData[] = [
     amount: 52.99,
     frequency: 'monthly',
     category: 'Software',
-    status: 'inactive',
-    lastUsed: new Date('2023-11-10'),
+    status: 'unused',
+    lastUsed: '2023-11-10',
   },
   {
     id: '4',
@@ -36,11 +35,11 @@ export const mockSubscriptions: SubscriptionData[] = [
     frequency: 'monthly',
     category: 'Fitness',
     status: 'active',
-    lastUsed: new Date('2024-01-18'),
+    lastUsed: '2024-01-18',
   },
 ];
 
-export const mockFees: FeeData[] = [
+export const mockFees: Fee[] = [
   {
     id: '1',
     type: 'ATM Fee',

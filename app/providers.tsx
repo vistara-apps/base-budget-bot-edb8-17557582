@@ -2,7 +2,7 @@
 
 import { type ReactNode } from "react";
 import { base } from "wagmi/chains";
-import { MiniKitProvider } from "@coinbase/onchainkit/minikit";
+import { MiniKitProvider } from "./mocks/minikit";
 
 export function Providers(props: { children: ReactNode }) {
   return (

@@ -34,11 +34,11 @@ export function DeFiPositionCard({ position, onOptimize }: DeFiPositionCardProps
       <div className="flex justify-between items-start mb-3">
         <div>
           <h3 className="font-medium text-text">{position.protocol}</h3>
-          <p className="text-sm text-muted">{position.amount} {position.asset}</p>
+          <p className="text-sm text-muted">{position.amountStaked} {position.asset}</p>
         </div>
         <div className="text-right">
-          <p className="font-semibold text-success">{position.apy}% APY</p>
-          <p className="text-xs text-muted">{position.earnings} earned</p>
+          <p className="font-semibold text-success">{position.currentAPY}% APY</p>
+          <p className="text-xs text-muted">${position.estimatedEarnings.toFixed(2)} earned</p>
         </div>
       </div>
       
@@ -51,7 +51,7 @@ export function DeFiPositionCard({ position, onOptimize }: DeFiPositionCardProps
         {onOptimize && (
           <ActionButton 
             variant="secondary" 
-            onClick={() => onOptimize(position.id)}
+            onClick={() => onOptimize(position.positionId)}
             className="text-xs px-3 py-1"
           >
             Optimize
